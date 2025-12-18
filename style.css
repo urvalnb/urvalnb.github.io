@@ -1,81 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", sans-serif;
+  background: #ffffff;
   color: #222;
-  line-height: 1.6;
 }
 
 .hero {
   text-align: center;
-  padding: 40px 20px;
-  background: #f8f8f8;
-}
-
-.hero .intro {
-  font-size: 18px;
-  color: #666;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
 }
 
 .hero h1 {
-  margin: 5px 0;
-  font-size: 36px;
+  font-size: 38px;
+  margin: 10px 0;
 }
 
 .hero h2 {
-  font-size: 20px;
-  color: #444;
   font-weight: normal;
+  color: #555;
+}
+
+.intro {
+  color: #666;
+}
+
+.buttons {
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  margin: 5px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
 .contact {
   list-style: none;
   padding: 0;
-  margin-top: 15px;
 }
 
 .contact li {
-  font-size: 16px;
-  margin: 4px 0;
+  margin: 6px 0;
 }
 
 section {
-  padding: 30px 40px;
-  border-bottom: 1px solid #ddd;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-section h3 {
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-.skills ul,
-.projects {
-  list-style: none;
-  padding-left: 0;
-}
-
-.skills li,
-.projects li {
-  margin-bottom: 10px;
-}
-
-.job {
+h3 {
+  font-size: 26px;
   margin-bottom: 20px;
 }
 
-.job h4 {
-  margin: 0;
-  font-size: 18px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  padding: 15px;
+  border-radius: 8px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.job {
+  margin-bottom: 25px;
 }
 
 .job span {
-  font-size: 14px;
   color: #666;
+  font-size: 14px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  padding: 15px;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
+
+.project span {
+  font-size: 13px;
+  color: #555;
 }
 
 footer {
   text-align: center;
-  padding: 15px;
-  background: #f8f8f8;
-  font-size: 14px;
+  padding: 20px;
+  background: #f1f1f1;
+  margin-top: 40px;
 }
+
