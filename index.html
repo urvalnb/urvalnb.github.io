@@ -1,129 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Urval Bhadiyadra</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Urval Bhadiyadra | Software Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container nav-flex">
+    <h2 class="logo">Urval</h2>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
 <!-- HERO -->
 <section class="hero">
-  <div class="container">
-    <p class="hello">Hello Everybody, I am</p>
-    <h1>Urval Bhadiyadra</h1>
-    <h2>Software Engineer</h2>
+  <div class="container hero-flex">
+    <div class="hero-text">
+      <p class="hello">Hello, I'm</p>
+      <h1>Urval Bhadiyadra</h1>
+      <h2>Software Engineer</h2>
+      <p class="intro">
+        Backend-focused developer with 3+ years of experience
+        building scalable web applications using Ruby on Rails and Python.
+      </p>
+      <a href="#projects" class="btn primary">View My Work</a>
+    </div>
 
-    <ul class="contact-list">
-      <li>📞 +91 6353546066</li>
-      <li>✉️ urvalbhadiyadra@gmail.com</li>
-      <li>📍 India</li>
-    </ul>
-
-    <a class="cv-btn" href="urval_cv.pdf" download>Download CV</a>
+    <div class="hero-img">
+      <img src="profile.jpg" alt="Urval Bhadiyadra" />
+    </div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section class="section">
+<section id="about" class="section">
   <div class="container">
-    <h3>About Myself</h3>
+    <h3>About Me</h3>
     <p>
-      Software Engineer with 3+ years of experience in the IT industry,
-      including 2.5 years of hands-on experience in Ruby on Rails and
-      10 months working with Python. Strong understanding of MVC architecture,
-      REST APIs, backend systems, and database optimization.
+      I am a Software Engineer with strong experience in backend development,
+      REST APIs, MVC architecture, and database optimization.
+      I enjoy writing clean, maintainable code and building real-world products.
     </p>
   </div>
 </section>
 
-<!-- INFO BLOCKS -->
-<section class="section gray">
-  <div class="container grid-3">
-    <div class="info-box">
-      <h4>Backend</h4>
-      <p>Ruby on Rails, Python (Django REST)</p>
-    </div>
-    <div class="info-box">
-      <h4>Databases</h4>
-      <p>PostgreSQL, MySQL</p>
-    </div>
-    <div class="info-box">
-      <h4>Web</h4>
-      <p>HTML, CSS, JavaScript, jQuery</p>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section class="section">
+<!-- SKILLS -->
+<section id="skills" class="section gray">
   <div class="container">
-    <h3>Work Experience</h3>
+    <h3>Skills</h3>
 
-    <div class="item">
-      <h4>Software Engineer – Softices Consultancy Pvt. Ltd</h4>
-      <span>May 2023 – Present</span>
-      <p>
-        Backend Developer for <strong>Parivar – Community & Family Tree Management</strong>.
-        Built role-based admin panels, RESTful APIs, optimized PostgreSQL queries,
-        integrated Sidekiq for background jobs, and wrote RSpec tests.
-      </p>
-    </div>
+    <div class="grid-3">
+      <div class="info-box">
+        <h4>Backend</h4>
+        <p>Ruby on Rails, Python, Django REST</p>
+      </div>
 
-    <div class="item">
-      <h4>Software Engineer – Odot Tech Innovations</h4>
-      <span>June 2022 – May 2023</span>
-      <p>
-        Worked on <strong>Salah – Smart Prayer Time & Mosque Management System</strong>.
-        Implemented JWT authentication, multi-role admin panel,
-        optimized MySQL database performance, and supported frontend integration.
-      </p>
+      <div class="info-box">
+        <h4>Databases</h4>
+        <p>PostgreSQL, MySQL</p>
+      </div>
+
+      <div class="info-box">
+        <h4>Frontend</h4>
+        <p>HTML, CSS, JavaScript, jQuery</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="section gray">
+<section id="projects" class="section">
   <div class="container">
     <h3>Projects</h3>
 
-    <ul class="projects">
-      <li>
-        <strong>Parivar</strong><br>
-        Community & Family Tree Management System<br>
+    <div class="projects">
+      <div class="project-card">
+        <h4>Parivar</h4>
+        <p>Community & Family Tree Management System</p>
         <span>Ruby on Rails · PostgreSQL · Sidekiq</span>
-      </li>
+      </div>
 
-      <li>
-        <strong>Salah</strong><br>
-        Smart Prayer Time & Mosque Management System<br>
+      <div class="project-card">
+        <h4>Salah</h4>
+        <p>Smart Prayer Time & Mosque Management System</p>
         <span>Ruby on Rails · MySQL · JWT</span>
-      </li>
+      </div>
 
-      <li>
-        <strong>Vehicle Labs</strong><br>
-        Workshop & Repair Management Platform<br>
+      <div class="project-card">
+        <h4>Vehicle Labs</h4>
+        <p>Workshop & Repair Management Platform</p>
         <span>Python · Django REST · AWS</span>
-      </li>
+      </div>
 
-      <li>
-        <strong>MedTrack</strong><br>
-        Healthcare Appointment & Prescription System<br>
-        <span>Ruby on Rails · PostgreSQL · Devise</span>
-      </li>
-    </ul>
+      <div class="project-card">
+        <h4>MedTrack</h4>
+        <p>Healthcare Appointment & Prescription System</p>
+        <span>Ruby on Rails · PostgreSQL</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- EDUCATION -->
-<section class="section">
+<!-- RESUME -->
+<section id="resume" class="section gray">
   <div class="container">
-    <h3>Education</h3>
-    <p>
-      <strong>Diploma in Computer Engineering</strong><br>
-      Bhagwan Mahavir University — 2022
-    </p>
+    <h3>Resume</h3>
+    <p>You can view or download my resume below.</p>
+
+    <div class="resume-actions">
+      <a href="urval_cv.pdf" target="_blank" class="btn">View Resume</a>
+      <a href="urval_cv.pdf" download class="btn outline">Download PDF</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container">
+    <h3>Contact</h3>
+    <ul class="contact-list">
+      <li>📞 +91 6353546066</li>
+      <li>✉️ urvalbhadiyadra@gmail.com</li>
+      <li>📍 India</li>
+    </ul>
   </div>
 </section>
 
@@ -132,5 +142,6 @@
   <p>© 2025 Urval Bhadiyadra</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
