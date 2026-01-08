@@ -4,140 +4,124 @@
   <meta charset="UTF-8" />
   <title>Urval Bhadiyadra | Software Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
   <div class="container nav-flex">
     <h2 class="logo">Urval</h2>
-    <nav>
+    <div class="menu-toggle" id="mobile-menu">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#automations">Automations</a>
       <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div class="container hero-flex">
     <div class="hero-text">
       <p class="hello">Hello, I'm</p>
       <h1>Urval Bhadiyadra</h1>
-      <h2>Software Engineer</h2>
+      <h2>Software Engineer & Automation Expert</h2>
       <p class="intro">
-        Backend-focused developer with 3+ years of experience
-        building scalable web applications using Ruby on Rails and Python.
+        Backend-focused developer with 3+ years of experience 
+        building scalable web applications and <strong>n8n workflow automations</strong>.
       </p>
-      <a href="#projects" class="btn primary">View My Work</a>
+      <div class="hero-btns">
+        <a href="#projects" class="btn primary">View My Work</a>
+        <a href="#automations" class="btn outline">n8n Workflows</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="section">
   <div class="container">
     <h3>About Me</h3>
     <p>
       I am a Software Engineer with strong experience in backend development,
-      REST APIs, MVC architecture, and database optimization.
-      I enjoy writing clean, maintainable code and building real-world products.
+      REST APIs, and database optimization. Beyond traditional coding, I specialize in 
+      <strong>Low-code Automations</strong> using n8n to streamline business processes.
     </p>
   </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills" class="section gray">
+<section id="automations" class="section gray">
   <div class="container">
-    <h3>Skills</h3>
+    <div class="section-header">
+      <h3>n8n Workflows & Automations</h3>
+      <p>I share my custom n8n JSON workflows on GitHub Gists. You can import these directly into your local n8n instance.</p>
+    </div>
 
-    <div class="grid-3">
-      <div class="info-box">
-        <h4>Backend</h4>
-        <p>Ruby on Rails, Python, Django REST</p>
-      </div>
-
-      <div class="info-box">
-        <h4>Databases</h4>
-        <p>PostgreSQL, MySQL</p>
-      </div>
-
-      <div class="info-box">
-        <h4>Frontend</h4>
-        <p>HTML, CSS, JavaScript, jQuery</p>
+    <div class="gist-container">
+      <div class="info-box gist-card">
+        <div class="gist-header">
+          <i class="fab fa-github"></i>
+          <h4>n8n Workflow Library</h4>
+        </div>
+        <p>Access all my automation blueprints including CRM integrations, lead processing, and custom API handlers.</p>
+        <div class="gist-actions">
+          <a href="https://gist.github.com/urvalnb" target="_blank" class="btn primary">Browse Gists</a>
+          <button onclick="copyGistUrl()" class="btn outline">Copy Gist URL</button>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects" class="section">
   <div class="container">
-    <h3>Projects</h3>
-
+    <h3>Key Projects</h3>
     <div class="projects">
       <div class="project-card">
         <h4>Parivar</h4>
         <p>Community & Family Tree Management System</p>
-        <span>Ruby on Rails · PostgreSQL · Sidekiq</span>
+        <span class="tag">Ruby on Rails · PostgreSQL</span>
       </div>
-
-      <div class="project-card">
-        <h4>Salah</h4>
-        <p>Smart Prayer Time & Mosque Management System</p>
-        <span>Ruby on Rails · MySQL · JWT</span>
-      </div>
-
       <div class="project-card">
         <h4>Vehicle Labs</h4>
         <p>Workshop & Repair Management Platform</p>
-        <span>Python · Django REST · AWS</span>
+        <span class="tag">Python · Django · AWS</span>
       </div>
-
-      <div class="project-card">
-        <h4>MedTrack</h4>
-        <p>Healthcare Appointment & Prescription System</p>
-        <span>Ruby on Rails · PostgreSQL</span>
       </div>
-    </div>
   </div>
 </section>
 
-<!-- RESUME -->
-<section id="resume" class="section gray">
-  <div class="container">
-    <h3>Resume</h3>
-    <p>You can view or download my resume below.</p>
-
-    <div class="resume-actions">
-      <a href="urval_cv.pdf" target="_blank" class="btn">View Resume</a>
-      <a href="urval_cv.pdf" download class="btn outline">Download PDF</a>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
 <section id="contact" class="section">
   <div class="container">
     <h3>Contact</h3>
     <ul class="contact-list">
-      <li>📞 +91 6353546066</li>
-      <li>✉️ urvalbhadiyadra@gmail.com</li>
-      <li>📍 India</li>
+      <li><i class="fas fa-phone"></i> +91 6353546066</li>
+      <li><i class="fas fa-envelope"></i> urvalbhadiyadra@gmail.com</li>
+      <li><i class="fas fa-map-marker-alt"></i> India</li>
     </ul>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2025 Urval Bhadiyadra</p>
-</footer>
+<script>
+  // Mobile Menu Toggle
+  const menuToggle = document.getElementById('mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
 
-<script src="script.js"></script>
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Copy Gist URL function
+  function copyGistUrl() {
+    const url = "https://gist.github.com/urvalnb";
+    navigator.clipboard.writeText(url);
+    alert("Gist URL copied to clipboard!");
+  }
+</script>
 </body>
 </html>
