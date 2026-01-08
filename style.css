@@ -165,3 +165,94 @@ footer {
     justify-content: center;
   }
 }
+/* ... Keep your existing Reset and Base styles ... */
+
+/* UPDATED NAVBAR FOR RESPONSIVENESS */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none; /* Hide by default on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .navbar nav a {
+    margin: 10px 0;
+  }
+}
+
+/* AUTOMATIONS SECTION STYLE */
+.gist-card {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.gist-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.gist-header i {
+  font-size: 30px;
+}
+
+.gist-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* RESPONSIVE GRIDS */
+.grid-3, .projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #666;
+  background: #eee;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* HERO RESPONSIVENESS */
+@media (max-width: 768px) {
+  .hero-flex {
+    text-align: center;
+    flex-direction: column;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+}
