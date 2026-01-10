@@ -95,7 +95,7 @@ body {
   background: transparent;
 }
 
-/* SECTIONS */
+/*  S */
 .section {
   padding: 70px 0;
 }
@@ -140,14 +140,94 @@ body {
   transform: translateY(-5px);
 }
 
-/* CONTACT */
-.contact-list {
-  list-style: none;
-  padding: 0;
+/* GET IN TOUCH */
+.contact-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.contact-list li {
-  margin-bottom: 10px;
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+  position: relative;
+}
+
+/* Grid Layout */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Contact Card */
+.contact-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Icons */
+.icon-box {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.whatsapp {
+  color: #25D366;
+  background: #e8f9ee;
+}
+
+.email {
+  color: #ea4335;
+  background: #fdeced;
+}
+
+.location {
+  color: #4285f4;
+  background: #e8f0fe;
+}
+
+/* Text Info */
+.contact-info span {
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.contact-info p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+  word-break: break-all;
 }
 
 /* FOOTER */
@@ -165,6 +245,7 @@ footer {
     justify-content: center;
   }
 }
+
 /* ... Keep your existing Reset and Base styles ... */
 
 /* UPDATED NAVBAR FOR RESPONSIVENESS */
@@ -180,7 +261,8 @@ footer {
   }
 
   .nav-links {
-    display: none; /* Hide by default on mobile */
+    display: none;
+    /* Hide by default on mobile */
     flex-direction: column;
     position: absolute;
     top: 70px;
@@ -207,7 +289,7 @@ footer {
   margin: 20px auto;
   text-align: center;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .gist-header {
@@ -230,7 +312,8 @@ footer {
 }
 
 /* RESPONSIVE GRIDS */
-.grid-3, .projects {
+.grid-3,
+.projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
@@ -252,7 +335,94 @@ footer {
     text-align: center;
     flex-direction: column;
   }
+
   .hero h1 {
     font-size: 32px;
   }
+}
+
+/* SERVICES SECTION */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-color: #000;
+}
+
+.service-card i {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.service-card h4 {
+  margin: 0 0 15px 0;
+  font-size: 1.1rem;
+}
+
+.service-card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* SKILLS SECTION */
+.skills-category {
+  margin-bottom: 40px;
+}
+
+.skills-category h4 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Update/Override existing .tag */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  /* Reset previous margins */
+  background: #f3f3f3;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 100px;
+  /* Pill shape */
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.tag:hover {
+  background: #fff;
+  border-color: #ddd;
+  transform: translateY(-1px);
+}
+
+.skill-note {
+  font-size: 0.85rem;
+  color: #777;
+  margin: -10px 0 15px 0;
+  font-style: italic;
 }
